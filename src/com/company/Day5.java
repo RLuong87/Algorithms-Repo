@@ -12,6 +12,7 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
+
 public class Day5 {
 
     public static void main(String[] args) throws IOException {
