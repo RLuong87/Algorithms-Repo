@@ -7,13 +7,16 @@ public class Day6 {
 
     public static void main(String[] args) {
 
-        System.out.println(splitEvenAndOdd("adbecf"));
+        System.out.println(splitEvenAndOdd("ovyvzvptyvpvpxyztlrztsrztztqvrxtxuxq"));
+        System.out.println(splitEvenAndOdd("ivvkxq"));
+        System.out.println(splitEvenAndOdd("ivvkx"));
 
-        String s = "Hacker";
-        char[] charArray = s.toCharArray();
+        String str = "ovyvzvptyvpvpxyztlrztsrztztqvrxtxuxq";
+        char[] charArray = str.toCharArray();
         String even = "", odd = "";
-        int numChar;
-        for (int i = 0; i < charArray.length; i++) {
+
+        for (int i = 0; i < str.length(); i++) {
+
             if (i % 2 == 0) {
                 even += charArray[i];
             } else {
@@ -29,7 +32,7 @@ public class Day6 {
         String even = "", odd = "";
 
         for (int i = 0; i < charArray.length; i++) {
-            if ( i % 2 == 0) {
+            if (i % 2 == 0) {
                 even += charArray[i];
             } else {
                 odd += charArray[i];
