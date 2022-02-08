@@ -32,7 +32,7 @@ public class Day6 {
         String even = "", odd = "";
 
         for (int i = 0; i < charArray.length; i++) {
-            if (i % 2 == 0) {
+            if (i % 2 == 0 && charArray.length != 2) {
                 even += charArray[i];
             } else {
                 odd += charArray[i];
