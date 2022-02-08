@@ -22,13 +22,14 @@ public class OrganizingContainers {
                 ball = container.get(i).get(j); // current ball
                 totalValueInContainer += ball; // Totaling all the balls inside a container
 
-                if (ballCount.containsKey(j)) { // checking if the ball(j) exists inside the hashmap
-                    int amount = ball; // storing the balls(j) from i container into a variable
-                    amount += ballCount.get(j); // get the balls and add it all together
-                    ballCount.put(j, amount); // update the ball and put it in the map
-                } else {
+                if (!ballCount.containsKey(j)) { // checking if the ball(j) exists inside the hashmap
                     ballCount.put(j, ball); // if ball(j) does not exist, then put it in the map
+//                    System.out.println("Total in container: " + totalValueInContainer);
+                } else {
+                    ball += ballCount.get(j); // get the balls and add it all together
+                    ballCount.put(j, ball); // update the ball and put it in the map
                 }
+                System.out.println(ballCount);
             }
             // 0, 1, 2, 3 = 6
             // 5, 1, 2, 3 = 11
@@ -53,10 +54,10 @@ public class OrganizingContainers {
             }
         }
 
-        System.out.println("MaxContainer: " + maxContainerSize);
-        System.out.println("MinContainer: " + minContainerSize);
-        System.out.println("MaxNumber: " + max);
-        System.out.println("MinNumber: " + min);
+//        System.out.println("MaxContainer: " + maxContainerSize);
+//        System.out.println("MinContainer: " + minContainerSize);
+//        System.out.println("MaxNumber: " + max);
+//        System.out.println("MinNumber: " + min);
 
         if (max <= maxContainerSize && min <= minContainerSize) {
             return "Possible";
@@ -68,12 +69,12 @@ public class OrganizingContainers {
 
         List<List<Integer>> containers = new ArrayList<>();
 
-        containers.add(List.of(997612619, 934920795, 998879231, 999926463));
-        containers.add(List.of(960369681, 997828120, 999792735, 979622676));
-        containers.add(List.of(999013654, 998634077, 997988323, 958769423));
-        containers.add(List.of(997409523, 999301350, 940952923, 993020546));
-//        containers.add(List.of(1, 4));
-//        containers.add(List.of(2, 3));
+//        containers.add(List.of(997612619, 934920795, 998879231, 999926463));
+//        containers.add(List.of(960369681, 997828120, 999792735, 979622676));
+//        containers.add(List.of(999013654, 998634077, 997988323, 958769423));
+//        containers.add(List.of(997409523, 999301350, 940952923, 993020546));
+        containers.add(List.of(1, 4));
+        containers.add(List.of(2, 3));
 
         System.out.println(organizingContainers(containers));
 
