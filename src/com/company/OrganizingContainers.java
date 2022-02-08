@@ -9,22 +9,18 @@ public class OrganizingContainers {
         //TODO: things to try, use an incrementer to use as a key in a hashmap. As the list grows dynamically, create a method to handle multiple lists
         //TODO: Tally up the values of indices from 0 -> n-1, store in a hashmap or a list. Check if each item is equal to each other
 
-        String result = "Impossible";
-
-        int diffTypeOfBalls = container.get(0).size();
-        System.out.println("different number of balls = " + diffTypeOfBalls);
-
         HashMap<Integer, Integer> ballCount = new HashMap<>();
 
         int maxContainerSize = Integer.MIN_VALUE;
         int minContainerSize = Integer.MAX_VALUE;
 
-        int totalValueInContainer = 0, ball = 0;
+        int totalValueInContainer = 0, ball;
+
         for (int i = 0; i < container.size(); i++) {
 
             for (int j = 0; j < container.get(i).size(); j++) {
                 ball = container.get(i).get(j); // current ball
-                totalValueInContainer += ball; // Getting the number of balls inside a container
+                totalValueInContainer += ball; // Totaling all the balls inside a container
 
                 if (ballCount.containsKey(j)) { // checking if the ball(j) exists inside the hashmap
                     int amount = ball; // storing the balls(j) from i container into a variable
@@ -36,13 +32,14 @@ public class OrganizingContainers {
             }
             // 0, 1, 2, 3 = 6
             // 5, 1, 2, 3 = 11
+            // if the number of balls exceeds the amount a container can hold
             if (totalValueInContainer != 0 && totalValueInContainer > maxContainerSize) {
                 maxContainerSize = totalValueInContainer; // 6, 11
             }
-            if (totalValueInContainer != 0 && totalValueInContainer < minContainerSize){
+            if (totalValueInContainer != 0 && totalValueInContainer < minContainerSize) {
                 minContainerSize = totalValueInContainer; // 6
             }
-            totalValueInContainer = 0;
+            totalValueInContainer = 0; // reset the count
         }
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
@@ -62,21 +59,21 @@ public class OrganizingContainers {
         System.out.println("MinNumber: " + min);
 
         if (max <= maxContainerSize && min <= minContainerSize) {
-            result = "Possible";
+            return "Possible";
         }
-        return result;
+        return "Impossible";
     }
 
     public static void main(String[] args) {
 
         List<List<Integer>> containers = new ArrayList<>();
 
-//        containers.add(List.of(997612619, 934920795, 998879231, 999926463));
-//        containers.add(List.of(960369681, 997828120, 999792735, 979622676));
-//        containers.add(List.of(999013654, 998634077, 997988323, 958769423));
-//        containers.add(List.of(997409523, 999301350, 940952923, 993020546));
-        containers.add(List.of(1, 4));
-        containers.add(List.of(2, 3));
+        containers.add(List.of(997612619, 934920795, 998879231, 999926463));
+        containers.add(List.of(960369681, 997828120, 999792735, 979622676));
+        containers.add(List.of(999013654, 998634077, 997988323, 958769423));
+        containers.add(List.of(997409523, 999301350, 940952923, 993020546));
+//        containers.add(List.of(1, 4));
+//        containers.add(List.of(2, 3));
 
         System.out.println(organizingContainers(containers));
 
