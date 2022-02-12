@@ -48,7 +48,7 @@ public class SalesByMatch {
             total = entry.getValue() / 2;
             totalPairs += total;
         }
-//        System.out.println(totalPairs);
+        System.out.println(totalPairs);
         System.out.println("Number of socks: " + sockCount);
     }
 }

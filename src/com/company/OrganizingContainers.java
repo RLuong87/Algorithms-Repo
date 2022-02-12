@@ -16,18 +16,18 @@ public class OrganizingContainers {
 
         int totalValueInContainer = 0, ball;
 
-        for (int i = 0; i < container.size(); i++) {
+        for (List<Integer> integers : container) {
 
-            for (int j = 0; j < container.get(i).size(); j++) {
-                ball = container.get(i).get(j); // current ball
+            for (int index = 0; index < integers.size(); index++) {
+                ball = integers.get(index); // current ball
                 totalValueInContainer += ball; // Totaling all the balls inside a container
 
-                if (!ballCount.containsKey(j)) { // checking if the ball(j) exists inside the hashmap
-                    ballCount.put(j, ball); // if ball(j) does not exist, then put it in the map
+                if (!ballCount.containsKey(index)) { // checking if the ball(index) exists inside the hashmap
+                    ballCount.put(index, ball); // if ball(index) does not exist, then put it in the map
 //                    System.out.println("Total in container: " + totalValueInContainer);
                 } else {
-                    ball += ballCount.get(j); // get the balls and add it all together
-                    ballCount.put(j, ball); // update the ball and put it in the map
+                    ball += ballCount.get(index); // get the balls and add it all together
+                    ballCount.put(index, ball); // update the ball and put it in the map
                 }
                 System.out.println(ballCount);
             }
