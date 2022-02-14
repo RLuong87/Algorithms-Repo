@@ -19,19 +19,22 @@ public class CountingValleys {
 //        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
 //        String path = "UDDDUDUU"; // 1 Valley deep
         String path = "DDUUUUDD";
-        int steps = path.length();
 
-        boolean countValleys = false;
+        HashMap<Character, Integer> countingValleys = new HashMap<>();
+
         int count = 0;
-        for (int i = 0; i < steps; i++) {
+        for (int i = 0; i < path.length() - 1; i++) {
 
             if (path.charAt(i) == 'D' && path.charAt(i + 1) == 'D') {
                 count++;
-                countValleys = true;
             }
-            if (path.charAt(i) != 'D' && path.charAt(i + 1) != 'D') {
+            if (!countingValleys.containsKey(path.charAt(i))) {
+                countingValleys.put(path.charAt(i), count);
+            } else {
+                countingValleys.put(path.charAt(i), countingValleys.get(path.charAt(i)) + count);
             }
         }
+        System.out.println(countingValleys);
         System.out.println(count);
 
 

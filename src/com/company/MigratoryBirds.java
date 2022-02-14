@@ -47,21 +47,29 @@ public class MigratoryBirds {
 
     public static void main(String[] args) {
 
-        List<Integer> birdsTypes = new ArrayList<>() {{
-            add(1);
-            add(1);
-            add(2);
-            add(2);
-            add(3);
-//            add(4);
-//            add(3);
-//            add(2);
-//            add(1);
-//            add(3);
-//            add(4);
 //            1 4 4 4 5 3 / Expected output: 4
 //            1 2 3 4 5 4 3 2 1 3 4 / Expected output: 3
-        }};
+
+        List<Integer> birdsTypes = Arrays.asList(1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4);
         System.out.println(migratoryBirds(birdsTypes));
+
+
+        Integer curr = null;
+        int count = 0;
+        System.out.print("{");
+        for (int value : birdsTypes) {
+            if (curr == null) {
+                curr = value;
+                count = 1;
+            } else if (curr != value) {
+                System.out.print("(" + curr + ", " + count + ")");
+                curr = value;
+                count = 1;
+            } else {
+                count++;
+            }
+        }
+        System.out.print("(" + curr + ", " + count + ")");
+        System.out.print("}");
     }
 }

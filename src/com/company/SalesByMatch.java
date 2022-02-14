@@ -38,15 +38,12 @@ public class SalesByMatch {
         HashMap<Integer, Integer> sockCount = new HashMap<>();
 
         for (int i = 0; i < pairs.size(); i++) {
-
             sockCount.put(pairs.get(i), Collections.frequency(pairs, pairs.get(i)));
-
         }
 
-        int total = 0, totalPairs = 0;
+        int totalPairs = 0;
         for (Map.Entry<Integer, Integer> entry : sockCount.entrySet()) {
-            total = entry.getValue() / 2;
-            totalPairs += total;
+            totalPairs += entry.getValue() / 2;
         }
         System.out.println(totalPairs);
         System.out.println("Number of socks: " + sockCount);
