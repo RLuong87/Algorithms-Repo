@@ -11,7 +11,13 @@ public class SalesByMatch {
         HashMap<Integer, Integer> sockCount = new HashMap<>();
 
         for (int i = 0; i < n; i++) {
-            sockCount.put(ar.get(i), Collections.frequency(ar, ar.get(i)));
+//            sockCount.put(ar.get(i), Collections.frequency(ar, ar.get(i)));
+
+            if (!sockCount.containsKey(ar.get(i))) {
+                sockCount.put(ar.get(i), 1);
+            } else {
+                sockCount.put(ar.get(i), sockCount.get(ar.get(i)) + 1);
+            }
         }
 
         for (Map.Entry<Integer, Integer> entry : sockCount.entrySet()) {
@@ -45,7 +51,7 @@ public class SalesByMatch {
         for (Map.Entry<Integer, Integer> entry : sockCount.entrySet()) {
             totalPairs += entry.getValue() / 2;
         }
-        System.out.println(totalPairs);
-        System.out.println("Number of socks: " + sockCount);
+//        System.out.println(totalPairs);
+//        System.out.println("Number of socks: " + sockCount);
     }
 }
