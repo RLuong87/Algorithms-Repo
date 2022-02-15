@@ -11,12 +11,12 @@ public class SalesByMatch {
         HashMap<Integer, Integer> sockCount = new HashMap<>();
 
         for (int i = 0; i < n; i++) {
-//            sockCount.put(ar.get(i), Collections.frequency(ar, ar.get(i)));
 
             if (!sockCount.containsKey(ar.get(i))) {
                 sockCount.put(ar.get(i), 1);
             } else {
-                sockCount.put(ar.get(i), sockCount.get(ar.get(i)) + 1);
+                sockCount.put(ar.get(i), Collections.frequency(ar, ar.get(i)));
+//                sockCount.put(ar.get(i), sockCount.get(ar.get(i)) + 1);
             }
         }
 
