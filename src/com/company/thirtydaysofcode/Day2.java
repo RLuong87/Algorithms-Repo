@@ -1,4 +1,4 @@
-package com.company;
+package com.company.thirtydaysofcode;
 
 import java.io.*;
 import java.math.*;
@@ -28,22 +28,5 @@ class Day2 {
         double tip = meal_cost * (tip_percent / (double) 100);
         double tax = meal_cost * (tax_percent / (double) 100);
         System.out.println(Math.round(meal_cost + tip + tax));
-    }
-}
-
-    class Result {
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
-        double meal_cost = Double.parseDouble(bufferedReader.readLine().trim());
-
-        int tip_percent = Integer.parseInt(bufferedReader.readLine().trim());
-
-        int tax_percent = Integer.parseInt(bufferedReader.readLine().trim());
-
-        Day2.solve(meal_cost, tip_percent, tax_percent);
-
-        bufferedReader.close();
     }
 }

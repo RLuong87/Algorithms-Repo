@@ -1,4 +1,4 @@
-package com.company;
+package com.company.hackerrank;
 
 import java.util.ArrayList;
 import java.util.HashMap;

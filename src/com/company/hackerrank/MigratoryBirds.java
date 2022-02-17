@@ -1,4 +1,4 @@
-package com.company;
+package com.company.hackerrank;
 
 import java.util.*;
 
@@ -50,9 +50,8 @@ public class MigratoryBirds {
 //            1, 4, 4, 4, 5, 3 / Expected output: 4
 //            1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4 / Expected output: 3
 
-        List<Integer> birdsTypes = Arrays.asList(1, 4, 4, 4, 5, 3);
+        List<Integer> birdsTypes = List.of(1, 4, 4, 4, 5, 3);
         System.out.println(migratoryBirds(birdsTypes));
-
 
         Integer curr = null;
         int count = 0;
