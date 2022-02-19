@@ -33,7 +33,23 @@ public class SherlockAndAnagrams {
 
         String str = "abba";
 
-//        HashMap<Integer>
+        int count = 0;
+
+        String[] chars = str.split("");
+
+        HashMap<Integer, String> pairs = new HashMap<>();
+
+        for (int i = 0; i < chars.length; i++) {
+
+            pairs.put(i, chars[i]);
+        }
+
+        for (Map.Entry<Integer, String> s: pairs.entrySet()) {
+
+
+        }
+        System.out.println(count);
+
 
 
 //        System.out.println(count);
