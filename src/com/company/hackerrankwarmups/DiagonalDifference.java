@@ -11,7 +11,10 @@ public class DiagonalDifference {
 
             for (int j = 0; j < arr.size(); j++) {
 
+                for (int k = 0; k < arr.size(); k++) {
+                    System.out.println(arr.get(j).get(k));
 
+                }
             }
         }
         return 0;
