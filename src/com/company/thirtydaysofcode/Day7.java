@@ -24,23 +24,6 @@ public class Day7 {
         bufferedReader.close();
     }
 
-//    public static void main(String[] args) {
-//
-//        int[] numbers = {1, 4, 3, 2};
-//        List<Integer> numbers2 = List.of(1, 2, 3, 4);
-//
-//        displayNumbers(numbers2);
-//        System.out.println();
-//
-//        for (int i = numbers.length - 1; i >= 0; i--) {
-//
-//            System.out.print(numbers[i]);
-//            if (i > 0) {
-//                System.out.print(" ");
-//            }
-//        }
-//    }
-
     public static void displayNumbers(List<Integer> numbers) {
 
         for (int i = numbers.size() - 1; i >= 0; i--) {
