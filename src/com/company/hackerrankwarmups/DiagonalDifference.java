@@ -7,16 +7,14 @@ public class DiagonalDifference {
 
     public static int diagonalDifference(List<List<Integer>> arr) {
 
+        int leftToRight = 0, rightToLeft = 0;
+
         for (int i = 0; i < arr.size(); i++) {
 
-            for (int j = 0; j < arr.size(); j++) {
+           leftToRight = arr.get(0).get(0) + arr.get(1).get(1) + arr.get(2).get(2);
 
-                for (int k = 0; k < arr.size(); k++) {
-                    System.out.println(arr.get(j).get(k));
-
-                }
-            }
         }
+        System.out.println(leftToRight);
         return 0;
     }
 
