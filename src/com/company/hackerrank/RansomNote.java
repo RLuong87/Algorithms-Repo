@@ -30,7 +30,6 @@ public class RansomNote {
                 }
             }
         }
-        System.out.println(yes);
         System.out.println(checkMagazine);
         System.out.println(checkNote);
     }
