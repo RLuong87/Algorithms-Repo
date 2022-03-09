@@ -18,26 +18,20 @@ public class RansomNote {
         }
         StringBuilder yes = new StringBuilder();
 
-        for (String cn : checkNote.values()) {
-
-//            for (Map.Entry<String, String> cm : checkMagazine.entrySet()) {
-            for (String cm : checkNote.values()) {
-
-                if (cn.equals(cm)) {
-                    yes.append("Yes");
-                } else {
-                    yes.append("No");
-                }
-            }
+        if (checkMagazine.containsValue(checkNote)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
         }
         System.out.println(checkMagazine);
         System.out.println(checkNote);
+//        System.out.println(yes);
     }
 
     public static void main(String[] args) {
 
-        String mag = "attack at dawn", rNote = "Attack at dawn";
-//        String mag = "give me one grand today night", rNote = "give one grand today";
+//        String mag = "attack at dawn", rNote = "Attack at dawn";
+        String mag = "give me one grand today night", rNote = "give one grand today";
 
         List<String> magazine = new ArrayList<>(Arrays.asList(mag.split(" ")));
         List<String> noteR = new ArrayList<>(Arrays.asList(rNote.split(" ")));

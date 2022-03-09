@@ -12,10 +12,10 @@ public class DiagonalDifference {
         for (int i = 0; i < arr.size(); i++) {
 
            leftToRight = arr.get(0).get(0) + arr.get(1).get(1) + arr.get(2).get(2);
+           rightToLeft = arr.get(0).get(2) + arr.get(1).get(1) + arr.get(2).get(0);
 
         }
-        System.out.println(leftToRight);
-        return 0;
+        return Math.abs(leftToRight - rightToLeft);
     }
 
     public static void main(String[] args) {

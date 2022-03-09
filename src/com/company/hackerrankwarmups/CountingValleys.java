@@ -1,4 +1,4 @@
-package com.company.hackerrank;
+package com.company.hackerrankwarmups;
 
 import java.util.*;
 
@@ -16,9 +16,7 @@ public class CountingValleys {
                 count++;
             }
         }
-
         return count;
-
     }
 
     public static <Char> void main(String[] args) {
@@ -29,37 +27,5 @@ public class CountingValleys {
 
         System.out.println(countingValleys(path.length(), path));
 
-        HashMap<Character, Integer> countingValleys = new HashMap<>();
-
-        int count = 0;
-        for (int i = 0; i < path.length() - 1; i++) {
-
-            if (path.charAt(i) == 'D' && path.charAt(i + 1) == 'D') {
-//                count++;
-            }
-            if (path.endsWith("DD")) {
-//                path = path.substring(0, path.length() - 1);
-                break;
-            }
-
-            if (!countingValleys.containsKey(path.charAt(i))) {
-                countingValleys.put(path.charAt(i), 1);
-            } else {
-                countingValleys.put(path.charAt(i), countingValleys.get(path.charAt(i)) + 1);
-            }
-        }
-//        System.out.println(countingValleys);
-//        System.out.println(count);
-
-
-        String[] pathArray = path.split("");
-
-        for (int i = 0; i < pathArray.length - 1; i++) {
-
-            if (Objects.equals(pathArray[i], "D") && Objects.equals(pathArray[i + 1], "D") && !pathArray[i].endsWith("DD")) {
-                count++;
-            }
-        }
-//        System.out.println(count);
     }
 }

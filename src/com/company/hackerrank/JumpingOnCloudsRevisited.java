@@ -1,6 +1,6 @@
 package com.company.hackerrank;
 
-public class JumpingOnClouds {
+public class JumpingOnCloudsRevisited {
 
     public static int jumpingOnClouds(int k, int[] clouds) {
 
