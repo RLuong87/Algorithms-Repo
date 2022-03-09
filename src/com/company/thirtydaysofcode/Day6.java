@@ -17,14 +17,15 @@ public class Day6 {
 
         for (int i = 0; i < n; i++) {
             String s = scan.nextLine();
-            String even = "", odd = "";
+            StringBuilder even = new StringBuilder();
+            StringBuilder odd = new StringBuilder();
 
             for (int j = 0; j < s.length(); j++) {
 
                 if (j % 2 == 0) {
-                    even += s.substring(j, j + 1);
+                    even.append(s.charAt(j));
                 } else {
-                    odd += s.substring(j, j + 1);
+                    odd.append(s.charAt(j));
                 }
             }
             System.out.println(even + " " + odd);
@@ -49,16 +50,16 @@ public class Day6 {
     public static String splitEvenAndOdd(String str) {
 
         char[] charArray = str.toCharArray();
-        String even = "", odd = "", newStr = "";
+        StringBuilder even = new StringBuilder();
+        StringBuilder odd = new StringBuilder();
 
         for (int i = 0; i < charArray.length; i++) {
             if (i % 2 == 0 && charArray.length != 2) {
-                even += charArray[i];
+                even.append(charArray[i]);
             } else {
-                odd += charArray[i];
+                odd.append(charArray[i]);
             }
-            newStr = even + " " + odd;
         }
-        return newStr;
+        return even + " " + odd;
     }
 }
