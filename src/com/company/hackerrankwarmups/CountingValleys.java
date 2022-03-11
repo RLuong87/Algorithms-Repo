@@ -8,18 +8,17 @@ public class CountingValleys {
 
         int count = 0;
 
-        String[] pathArray = path.split("");
+        for (int i = 0; i < path.length() - 1; i++) {
+            path = path.substring(0, steps - 2);
 
-        for (int i = 0; i < pathArray.length - 1; i++) {
-
-            if (Objects.equals(pathArray[i], "D") && Objects.equals(pathArray[i + 1], "D") && !pathArray[i].endsWith("DD")) {
+            if (path.charAt(i) == 'D' && path.charAt(i + 1) == 'D') {
                 count++;
             }
         }
         return count;
     }
 
-    public static <Char> void main(String[] args) {
+    public static void main(String[] args) {
 
 //        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
 //        String path = "UDDDUDUU"; // 1 Valley deep

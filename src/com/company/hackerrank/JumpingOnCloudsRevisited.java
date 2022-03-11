@@ -2,6 +2,12 @@ package com.company.hackerrank;
 
 public class JumpingOnCloudsRevisited {
 
+    /*
+
+     ********************** S O L V E D *****************************
+
+     */
+
     public static int jumpingOnClouds(int k, int[] clouds) {
 
         int energy = 100, cloud = 0;

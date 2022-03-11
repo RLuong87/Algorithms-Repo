@@ -6,6 +6,11 @@ import java.util.Stack;
 public class BalancedBrackets {
 
     /*
+
+    ********************** S O L V E D *****************************
+
+
+
      * Complete the 'isBalanced' function below.
      *
      * The function is expected to return a STRING.

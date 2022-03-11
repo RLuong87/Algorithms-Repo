@@ -7,31 +7,43 @@ public class RansomNote {
     public static void checkMagazine(List<String> magazine, List<String> note) {
 
         HashMap<String, String> checkMagazine = new HashMap<>();
-        HashMap<String, String> checkNote = new HashMap<>();
+        List<String> notAMatch = new ArrayList<>();
+        List<Integer> countOfWords = new ArrayList<>();
+
+        for (String no : note) {
+           countOfWords.add(Collections.frequency(note, no));
+        }
+
+        for (int count: countOfWords) {
+            if (count > 1) {
+                System.out.println("No");
+            }
+            break;
+        }
 
         for (String m : magazine) {
+            checkMagazine.put(m, m);
+        }
 
-            for (String n : note) {
-                checkMagazine.put(m, m);
-                checkNote.put(n, n);
+        for (String n : note) {
+            if (!checkMagazine.containsValue(n)) {
+                notAMatch.add(n);
             }
         }
-        StringBuilder yes = new StringBuilder();
-
-        if (checkMagazine.containsValue(checkNote)) {
-            System.out.println("Yes");
-        } else {
+        if (!notAMatch.isEmpty()) {
             System.out.println("No");
+        } else {
+            System.out.println("Yes");
         }
-        System.out.println(checkMagazine);
-        System.out.println(checkNote);
-//        System.out.println(yes);
+        System.out.println(notAMatch);
     }
 
     public static void main(String[] args) {
 
 //        String mag = "attack at dawn", rNote = "Attack at dawn";
-        String mag = "give me one grand today night", rNote = "give one grand today";
+//        String mag = "ive got a lovely bunch of coconuts", rNote = "ive got some coconuts";
+//        String mag = "give me one grand today night", rNote = "give one grand today";
+        String mag = "two times three is not four", rNote = "two times two is four";
 
         List<String> magazine = new ArrayList<>(Arrays.asList(mag.split(" ")));
         List<String> noteR = new ArrayList<>(Arrays.asList(rNote.split(" ")));
