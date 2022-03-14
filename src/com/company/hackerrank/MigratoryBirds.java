@@ -4,6 +4,12 @@ import java.util.*;
 
 public class MigratoryBirds {
 
+    /*
+
+     ********************** S O L V E D *****************************
+
+     */
+
     public static int migratoryBirds(List<Integer> arr) {
 
         /*
