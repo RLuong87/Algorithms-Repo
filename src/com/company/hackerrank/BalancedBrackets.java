@@ -46,7 +46,7 @@ public class BalancedBrackets {
             if (c == '{' || c == '[' || c == '(') {
                 balanced.push(c); // Push all the opening brackets into the stack
             } else {
-                if (balanced.empty()) { // Check if the stack is empty, if there were opening brackets detected
+                if (balanced.empty()) { // Check if the stack is empty, if there were no opening brackets detected
                     return "NO"; // return no
                 } else {
                     if (balanced.peek() == '(' && c == ')' || balanced.peek() == '[' && c == ']' || balanced.peek() == '{' && c == '}') {
