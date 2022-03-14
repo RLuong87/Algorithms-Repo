@@ -5,6 +5,12 @@ import java.util.List;
 
 public class AVeryBigSum {
 
+    /*
+
+     ********************** S O L V E D *****************************
+
+     */
+
     public static long aVeryBigSum(List<Long> ar) {
 
         long sum = 0;
