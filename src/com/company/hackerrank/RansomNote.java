@@ -48,9 +48,9 @@ public class RansomNote {
 //        String mag = "ive got a lovely bunch of coconuts", rNote = "ive got some coconuts";
         String mag = "give me one grand today night", rNote = "give one grand today";
 //        String mag = "two times three is not four", rNote = "two times two is four";
-
         List<String> magazine = new ArrayList<>(Arrays.asList(mag.split(" ")));
         List<String> noteR = new ArrayList<>(Arrays.asList(rNote.split(" ")));
+
         checkMagazine(magazine, noteR);
 
         HashMap<Integer, String> checkMagazine = new HashMap<>();
@@ -76,12 +76,5 @@ public class RansomNote {
                 }
             }
         }
-
-//        for (int i = 0; i < noteR.size(); i++) {
-//            ransomNote.put(i, noteR.get(i));
-//        }
-
-//        System.out.println(checkMagazine);
-//        System.out.println(ransomNote);
     }
 }

@@ -1,17 +1,16 @@
 package com.company.hackerrankwarmups;
 
-import java.util.*;
-
 public class CountingValleys {
 
     public static int countingValleys(int steps, String path) {
 
         int count = 0;
+        path = path.substring(0, path.length() - 2);
+        String[] p = path.split("");
 
-        for (int i = 0; i < path.length() - 1; i++) {
-            path = path.substring(0, steps - 2);
+        for (int i = 0; i < p.length - 1; i++) {
 
-            if (path.charAt(i) == 'D' && path.charAt(i + 1) == 'D') {
+            if (p[i].equals("D") && p[i + 1].equals("D")) {
                 count++;
             }
         }
@@ -21,8 +20,8 @@ public class CountingValleys {
     public static void main(String[] args) {
 
 //        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
-//        String path = "UDDDUDUU"; // 1 Valley deep
-        String path = "DDUUUUDD"; // 1 valley deep
+        String path = "UDDDUDUU"; // 1 Valley deep
+//        String path = "DDUUUUDD"; // 1 valley deep
 
         System.out.println(countingValleys(path.length(), path));
 
