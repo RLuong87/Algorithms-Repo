@@ -2,16 +2,32 @@ package com.company.hackerrankwarmups;
 
 public class CountingValleys {
 
+    /*
+
+     ********************** S O L V E D *****************************
+
+     */
+
     public static int countingValleys(int steps, String path) {
 
-        int count = 0;
-        path = path.substring(0, path.length() - 2);
-        String[] p = path.split("");
+        int seaLevel = 0, count = 0;
+        boolean isSeaLevel = true;
 
-        for (int i = 0; i < p.length - 1; i++) {
+        for (int i = 0; i < path.length(); i++) {
 
-            if (p[i].equals("D") && p[i + 1].equals("D")) {
+            if (path.charAt(i) == 'D') {
+                seaLevel--;
+            } else {
+                seaLevel++;
+            }
+
+            if (seaLevel < 0 && isSeaLevel) {
                 count++;
+                isSeaLevel = false;
+            }
+
+            if (seaLevel == 0) {
+                isSeaLevel = true;
             }
         }
         return count;
@@ -20,8 +36,8 @@ public class CountingValleys {
     public static void main(String[] args) {
 
 //        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
-        String path = "UDDDUDUU"; // 1 Valley deep
-//        String path = "DDUUUUDD"; // 1 valley deep
+//        String path = "UDDDUDUU"; // 1 Valley deep
+        String path = "DDUUUUDD"; // 1 valley deep
 
         System.out.println(countingValleys(path.length(), path));
 
