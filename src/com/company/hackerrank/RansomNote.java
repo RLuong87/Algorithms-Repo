@@ -76,5 +76,12 @@ public class RansomNote {
                 }
             }
         }
+
+//        for (int i = 0; i < noteR.size(); i++) {
+//            ransomNote.put(i, noteR.get(i));
+//        }
+
+//        System.out.println(checkMagazine);
+//        System.out.println(ransomNote);
     }
 }
