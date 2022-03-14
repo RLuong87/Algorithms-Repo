@@ -48,6 +48,5 @@ public class JumpingOnCloudsRevisited {
                 break;
             }
         }
-        System.out.println(energy);
     }
 }
