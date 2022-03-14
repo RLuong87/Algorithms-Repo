@@ -4,6 +4,12 @@ import java.util.*;
 
 public class SalesByMatch {
 
+    /*
+
+     ********************** S O L V E D *****************************
+
+     */
+
     public static int sockMerchant(int n, List<Integer> ar) {
 
         int totalPairs = 0;
