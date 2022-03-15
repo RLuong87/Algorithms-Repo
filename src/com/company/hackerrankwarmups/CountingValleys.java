@@ -20,6 +20,7 @@ public class CountingValleys {
             } else {
                 seaLevel++;
             }
+            System.out.println(seaLevel);
 
             if (seaLevel < 0 && isSeaLevel) {
                 count++;
@@ -30,14 +31,15 @@ public class CountingValleys {
                 isSeaLevel = true;
             }
         }
+        System.out.print("Number of valleys entered: ");
         return count;
     }
 
     public static void main(String[] args) {
 
-//        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
+        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
 //        String path = "UDDDUDUU"; // 1 Valley deep
-        String path = "DDUUUUDD"; // 1 valley deep
+//        String path = "DDUUUUDD"; // 1 valley deep
 
         System.out.println(countingValleys(path.length(), path));
 
