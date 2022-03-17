@@ -8,12 +8,14 @@ public class JumpingOnClouds {
 
         int countOfJumps = 0;
 
-        for (int i = 1; i < c.size(); i++) {
+        for (int i = 0; i < c.size() - 1; i++) {
 
-            if (c.get(i) % 2 == 0) {
+            if (c.get(i) % 2 == 0 && c.get(i + 1) % 2 == 0) {
                 countOfJumps++;
             }
         }
+        System.out.println(c);
+        System.out.println(c.size());
         return countOfJumps;
     }
 
@@ -24,7 +26,7 @@ public class JumpingOnClouds {
         System.out.println(jumpingOnClouds(List.of(0, 0, 1, 0, 0, 0, 0, 1, 0, 0)));
         System.out.println(jumpingOnClouds(List.of(
                 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
-                0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0)));
+                0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0))); //
 
     }
 }
