@@ -1,2 +1,4 @@
-package com.company.dictionariesandhashmaps;public class FrequencyQueries {
+package com.company.dictionariesandhashmaps;
+
+public class FrequencyQueries {
 }

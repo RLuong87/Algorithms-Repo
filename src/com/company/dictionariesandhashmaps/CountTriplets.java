@@ -1,2 +1,4 @@
-package com.company.dictionariesandhashmaps;public class CountTriplets {
+package com.company.dictionariesandhashmaps;
+
+public class CountTriplets {
 }
