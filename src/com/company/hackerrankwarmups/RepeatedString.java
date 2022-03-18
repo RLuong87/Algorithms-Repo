@@ -7,15 +7,17 @@ public class RepeatedString {
 
     public static long repeatedString(String s, long n) {
 
-        int count = 0, index = 0;
+        long count = 0, index = 0;
 
         StringBuilder str = new StringBuilder();
 
         while (s.length() < n) {
             str.append(s);
-            if (str.length() == n && str.charAt(index) == 'a') {
+            if (str.charAt((int) index) == 'a') {
                 count++;
+//                return count;
             }
+            System.out.println(str);
         }
         return count;
     }

@@ -12,9 +12,8 @@ public class SalesByMatch {
 
     public static int sockMerchant(int n, List<Integer> ar) {
 
-        int totalPairs = 0;
-
         HashMap<Integer, Integer> sockCount = new HashMap<>();
+        int totalPairs = 0;
 
         for (int i = 0; i < n; i++) {
 

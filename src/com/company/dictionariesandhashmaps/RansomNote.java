@@ -7,39 +7,28 @@ public class RansomNote {
     public static void checkMagazine(List<String> magazine, List<String> note) {
 
         Map<String, Integer> countOfWords = new HashMap<>();
-        Map<String, String> checkMagazine = new HashMap<>();
 
         for (String m : magazine) {
-            checkMagazine.put(m, m);
+            if (!countOfWords.containsKey(m)) {
+                countOfWords.put(m, 0);
+            }
+            countOfWords.put(m, countOfWords.get(m) + 1);
         }
+        System.out.println(countOfWords);
 
         for (String n : note) {
-            if (!countOfWords.containsKey(n)) {
-                countOfWords.put(n, 0);
+
+            if (countOfWords.containsKey(n)) {
+                countOfWords.put(n, countOfWords.get(n) - 1);
+                System.out.println("Yes");
+                return;
             }
-            countOfWords.put(n, countOfWords.get(n) + 1);
-        }
-
-        for (String s : magazine) {
-
-            for (Map.Entry<String, Integer> count : countOfWords.entrySet()) {
-
-                if (!checkMagazine.containsValue(count.getKey())) {
-                    System.out.println("No");
-                    break;
-                } else if (count.getValue() > 1) {
-                    System.out.println("No");
-                    break;
-                } else if (!s.equals(count.getKey())) {
-                    System.out.println("No");
-                    break;
-                } else {
-                    System.out.println("Yes");
-                    break;
-                }
+            if (countOfWords.get(n) <= 0) {
+                System.out.println("No");
+                return;
             }
-            break;
         }
+        System.out.println(countOfWords);
     }
 
     public static void checkMagazineV2(List<String> magazine, List<String> note) {
@@ -67,8 +56,10 @@ public class RansomNote {
         List<String> magazine = new ArrayList<>(Arrays.asList(mag.split(" ")));
         List<String> note = new ArrayList<>(Arrays.asList(rNote.split(" ")));
 
-//        checkMagazine(magazine, note);
-        checkMagazineV2(magazine, note);
+
+        checkMagazine(magazine, note);
+//        checkMagazineV2(magazine, note);
+
 
         HashMap<Integer, String> checkMagazine = new HashMap<>();
 //        HashMap<Integer, String> ransomNote = new HashMap<>();
