@@ -5,6 +5,12 @@ import java.util.Map;
 
 public class TwoStrings {
 
+    /*
+
+    SOLVED
+
+     */
+
     public static String twoStrings(String s1, String s2) {
 
         Map<String, Integer> subStrMap1 = new HashMap<>();
@@ -14,14 +20,14 @@ public class TwoStrings {
             if (!subStrMap1.containsKey(str1)) {
                 subStrMap1.put(str1, 0);
             }
-            subStrMap1.put(str1, subStrMap1.get(str1) + 1);
+            subStrMap1.put(str1, subStrMap1.get(str1));
         }
 
         for (String str2 : s2.split("")) {
             if (!subStrMap2.containsKey(str2)) {
                 subStrMap2.put(str2, 0);
             }
-            subStrMap2.put(str2, subStrMap2.get(str2) + 1);
+            subStrMap2.put(str2, subStrMap2.get(str2));
         }
 
         for (String s : subStrMap1.keySet()) {
