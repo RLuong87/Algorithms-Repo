@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoStrings {
+    
+    /*
+    
+    Solved
+    
+    */
 
     public static String twoStrings(String s1, String s2) {
 
