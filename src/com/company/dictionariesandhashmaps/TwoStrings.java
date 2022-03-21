@@ -11,12 +11,6 @@ public class TwoStrings {
     
     */
 
-    /*
-
-    SOLVED
-
-     */
-
     public static String twoStrings(String s1, String s2) {
 
         Map<String, Integer> subStrMap1 = new HashMap<>();
