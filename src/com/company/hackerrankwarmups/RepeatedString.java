@@ -15,7 +15,6 @@ public class RepeatedString {
             str.append(s);
             if (str.charAt((int) index) == 'a') {
                 count++;
-//                return count;
             }
             System.out.println(str);
         }

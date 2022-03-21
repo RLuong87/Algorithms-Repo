@@ -10,7 +10,6 @@ public class Anagrams {
 //        String s = "Hello, thanks for attempting this problem! Hope it will help you to learn java! Good luck and have a nice day!";
 //        String s = "He is a very very good boy, isn't he?";
 
-
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
         String[] splitS = s.split("[! ,?._'@]+");

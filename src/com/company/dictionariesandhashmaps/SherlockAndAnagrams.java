@@ -31,26 +31,21 @@ public class SherlockAndAnagrams {
 
         System.out.println(sherlockAndAnagrams("abba"));
 
-        String str = "abba";
+        String str = "hello";
 
         int count = 0;
 
-        String[] chars = str.split("");
+//        String[] strings = str.split("");
+        List<String> strings = new ArrayList<>(Arrays.asList(str.split("")));
+        Collections.reverse(strings);
 
         HashMap<Integer, String> pairs = new HashMap<>();
 
-        for (int i = 0; i < chars.length; i++) {
+        for (int i = 0; i < strings.size(); i++) {
 
-            pairs.put(i, chars[i]);
+//            pairs.put(i, );
         }
-
-        for (Map.Entry<Integer, String> s: pairs.entrySet()) {
-
-
-        }
-        System.out.println(count);
-
-
+        System.out.println(strings);
 
 //        System.out.println(count);
 //        System.out.println(str.substring(0, str.length() - 1));
