@@ -24,9 +24,11 @@ public class AngryProfessor {
 
         List<Integer> test = List.of(-1, -3, 4, 2);
         List<Integer> test2 = List.of(0, -1, 2, 1);
+        List<Integer> test3 = List.of(-1, -3, -2, 4, 2);
 
         System.out.println(angryProfessor(3, test));
         System.out.println(angryProfessor(2, test2));
+        System.out.println(angryProfessor(3, test3));
 
     }
 }
