@@ -1,6 +1,6 @@
 package com.company.hackerrank;
 
-public class BeautifulDays {
+public class BeautifulDayOut {
 
     /*
 
