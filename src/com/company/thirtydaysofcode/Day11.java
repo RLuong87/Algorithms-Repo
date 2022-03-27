@@ -6,28 +6,33 @@ import java.util.List;
 
 public class Day11 {
 
-    public static int day11(List<List<Integer>> arr) {
+    public static int hourGlass(List<List<Integer>> test) {
 
-        for (int i = 0; i < arr.size(); i++) {
+        int total = Integer.MIN_VALUE, hourGlass = Integer.MIN_VALUE;
 
-            for (int j = 0; j < arr.get(i).size(); j++) {
+        for (int i = 0; i < test.size(); i++) {
 
-                System.out.println(arr.get(i).get(j));
+            for (int j = 0; j < test.get(i).size(); j++) {
+
+                if ((j + 2) < 6 && (i + 2) < 6) {
+                    hourGlass = test.get(i).get(j) + test.get(i).get(j + 1) + test.get(i).get(j + 2) + test.get(i + 1).get(j + 1) + test.get(i + 2).get(j) + test.get(i + 2).get(j + 1) + test.get(i + 2).get(j + 2);
+                }
+                if (hourGlass > total) {
+                    total = hourGlass;
+                }
             }
         }
-        return 0;
+        return total;
     }
 
-    public static void diplayList(List<List<Integer>> l) {
+    public static void displayList(List<List<Integer>> l) {
 
         for (List arr : l) {
             System.out.println(arr);
         }
     }
 
-
     public static void main(String[] args) {
-
 
         List<List<Integer>> test = new ArrayList<>();
         test.add(Arrays.asList(1, 1, 1, 0, 0, 0));
@@ -45,26 +50,39 @@ public class Day11 {
         test2.add(Arrays.asList(-7, -3, -3, -2, -9, -9));
         test2.add(Arrays.asList(-1, -3, -1, -2, -4, -5));
 
-        diplayList(test);
+        List<List<Integer>> test3 = new ArrayList<>();
+        test3.add(Arrays.asList(1, 1, 1, 0, 0, 0));
+        test3.add(Arrays.asList(0, 1, 0, 0, 0, 0));
+        test3.add(Arrays.asList(1, 1, 1, 0, 0, 0));
+        test3.add(Arrays.asList(0, 9, 2, -4, -4, 0));
+        test3.add(Arrays.asList(0, 0, 0, -2, 0, 0));
+        test3.add(Arrays.asList(0, 0, -1, -2, -4, 0));
 
-        int total = 0, hourGlass = 0;
+        displayList(test);
+        System.out.println(hourGlass(test));
+        System.out.println();
 
-        for (int i = 0; i < test.size(); i++) {
+        displayList(test2);
+        System.out.println(hourGlass(test2));
 
+        System.out.println();
+        displayList(test3);
+        System.out.println(hourGlass(test3));
 
-            for (int j = 0; j < test.get(i).size(); j++) {
+        int maxSum = Integer.MIN_VALUE, hourGlass = Integer.MIN_VALUE;
 
-                if ((j + 2) < 6 && (i + 2) < 6) {
-//                    System.out.println(test.get(i).get(j));
-                    hourGlass = test.get(i).get(j) + test.get(i).get(j + 1) + test.get(i).get(j + 2) + test.get(i + 1).get(j + 1) + test.get(i + 2).get(j) + test.get(i + 2).get(j + 1) + test.get(i + 2).get(j + 2);
+        for (int i = 0; i < test2.size(); i++) {
+
+            for (int j = 0; j < test2.get(i).size(); j++) {
+
+                if ((i + 2) < 6 && (j + 2) < 6) {
+                    hourGlass = test2.get(i).get(j) + test2.get(i).get(j + 1) + test2.get(i).get(j + 2) + test2.get(i + 1).get(j + 1) + test2.get(i + 2).get(j) + test2.get(i + 2).get(j + 1) + test2.get(i + 2).get(j + 2);
                 }
-                if (hourGlass > total) {
-                    total = hourGlass;
+                if (hourGlass > maxSum) {
+                    maxSum = hourGlass;
                 }
             }
         }
-        System.out.println();
-//        System.out.println(hourGlass);
-        System.out.println(total);
+        System.out.println(maxSum);
     }
 }
