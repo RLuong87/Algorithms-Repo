@@ -34,13 +34,21 @@ public class Day11 {
 
     public static void main(String[] args) {
 
+//        List<List<Integer>> test = new ArrayList<>();
+//        test.add(Arrays.asList(1, 1, 1, 0, 0, 0));
+//        test.add(Arrays.asList(0, 1, 0, 0, 0, 0));
+//        test.add(Arrays.asList(1, 1, 1, 0, 0, 0));
+//        test.add(Arrays.asList(0, 0, 2, 4, 4, 0));
+//        test.add(Arrays.asList(0, 0, 0, 2, 0, 0));
+//        test.add(Arrays.asList(0, 0, 1, 2, 4, 0));
+
         List<List<Integer>> test = new ArrayList<>();
         test.add(Arrays.asList(1, 1, 1, 0, 0, 0));
         test.add(Arrays.asList(0, 1, 0, 0, 0, 0));
         test.add(Arrays.asList(1, 1, 1, 0, 0, 0));
-        test.add(Arrays.asList(0, 0, 2, 4, 4, 0));
-        test.add(Arrays.asList(0, 0, 0, 2, 0, 0));
-        test.add(Arrays.asList(0, 0, 1, 2, 4, 0));
+        test.add(Arrays.asList(0, 0, 0, 0, 0, 0));
+        test.add(Arrays.asList(0, 0, 0, 0, 0, 0));
+        test.add(Arrays.asList(0, 0, 0, 0, 0, 0));
 
         List<List<Integer>> test2 = new ArrayList<>();
         test2.add(Arrays.asList(-1, -1, 0, -9, -2, -2));
@@ -62,12 +70,12 @@ public class Day11 {
         System.out.println(hourGlass(test));
         System.out.println();
 
-        displayList(test2);
-        System.out.println(hourGlass(test2));
-
-        System.out.println();
-        displayList(test3);
-        System.out.println(hourGlass(test3));
+//        displayList(test2);
+//        System.out.println(hourGlass(test2));
+//
+//        System.out.println();
+//        displayList(test3);
+//        System.out.println(hourGlass(test3));
 
         int maxSum = Integer.MIN_VALUE, hourGlass = Integer.MIN_VALUE;
 
@@ -83,6 +91,6 @@ public class Day11 {
                 }
             }
         }
-        System.out.println(maxSum);
+//        System.out.println(maxSum);
     }
 }
