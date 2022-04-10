@@ -1,3 +1,3 @@
-# Algorithms-HackerRank
+# Algorithms
 
-This repository contains challenges from HackerRank, mainly Java algorithms.
+This repository contains challenges from HackerRank and Codesignal, mainly Java algorithms.
