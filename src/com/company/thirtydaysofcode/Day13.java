@@ -1,2 +1,4 @@
-package com.company.thirtydaysofcode;public class Day13 {
+package com.company.thirtydaysofcode;
+
+public class Day13 {
 }
