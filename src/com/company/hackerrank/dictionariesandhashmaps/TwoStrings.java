@@ -1,4 +1,4 @@
-package com.company.dictionariesandhashmaps;
+package com.company.hackerrank.dictionariesandhashmaps;
 
 import java.util.HashMap;
 import java.util.Map;

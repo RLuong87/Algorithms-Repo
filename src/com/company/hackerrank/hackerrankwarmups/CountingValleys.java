@@ -1,4 +1,4 @@
-package com.company.hackerrankwarmups;
+package com.company.hackerrank.hackerrankwarmups;
 
 public class CountingValleys {
 

@@ -1,7 +1,4 @@
-package com.company.hackerrankwarmups;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.company.hackerrank.hackerrankwarmups;
 
 public class RepeatedString {
 
