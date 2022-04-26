@@ -1,4 +1,4 @@
-package com.company;
+package com.company.algorithms2021;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ import java.util.Scanner;
 *
 */
 
-public class Email {
+public class EmailCLI {
     private final String firstName;
     private final String lastName;
     private String password;
@@ -17,7 +17,7 @@ public class Email {
     private String alternateEmail;
 
     // Constructor to have first name and last name
-    public Email(String firstName, String lastName) {
+    public EmailCLI(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
         String companySuffix = "babygames.com";

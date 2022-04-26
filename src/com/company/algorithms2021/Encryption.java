@@ -1,3 +1,5 @@
+package com.company.algorithms2021;
+
 public class Encryption {
 
     public static void main(String[] args) {
