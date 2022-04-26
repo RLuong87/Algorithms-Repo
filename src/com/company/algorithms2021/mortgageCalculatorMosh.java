@@ -1,8 +1,9 @@
+package com.company.algorithms2021;
 
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class Main {
+class Main {
     final static byte MONTHS_IN_YEAR = 12;
     final static byte PERCENT = 100;
 
@@ -56,11 +57,9 @@ public class Main {
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         float numberOfPayments = years * MONTHS_IN_YEAR;
 
-        double balance = principal
+        return principal
                 * (Math.pow(1 + monthlyInterest, numberOfPayments) - Math.pow(1 + monthlyInterest, numberOfPaymentsMade))
                 / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
-
-        return balance;
     }
 
     public static double calculateMortgage(
@@ -71,10 +70,8 @@ public class Main {
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         float numberOfPayments = years * MONTHS_IN_YEAR;
 
-        double mortgage = principal
+        return principal
                 * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
                 / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
-
-        return mortgage;
     }
 }

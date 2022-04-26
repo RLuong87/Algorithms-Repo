@@ -1,7 +1,9 @@
+package com.company.algorithms2021;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class MadLibs {
+class MadLibs {
 
     Scanner scanner = new Scanner(System.in);
     String story;

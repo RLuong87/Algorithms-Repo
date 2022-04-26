@@ -1,4 +1,4 @@
-package com.company;
+package com.company.algorithms2021;
 
 import java.util.Arrays;
 
