@@ -1,3 +1,3 @@
 # Algorithms
 
-This repository contains Java algorithms.
+This repository contains Java and Javascript algorithms.
