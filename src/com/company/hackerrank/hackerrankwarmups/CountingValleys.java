@@ -13,7 +13,7 @@ public class CountingValleys {
         int seaLevel = 0, count = 0;
         boolean isSeaLevel = true;
 
-        for (int i = 0; i < path.length(); i++) {
+        for (int i = 0; i < steps; i++) {
 
             if (path.charAt(i) == 'D') {
                 seaLevel--;
@@ -37,8 +37,8 @@ public class CountingValleys {
 
     public static void main(String[] args) {
 
-        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
-//        String path = "UDDDUDUU"; // 1 Valley deep
+//        String path = "DDUUDDUDUUUD"; // 2 Valleys deep
+        String path = "UDDDUDUU"; // 1 Valley deep
 //        String path = "DDUUUUDD"; // 1 valley deep
 
         System.out.println(countingValleys(path.length(), path));

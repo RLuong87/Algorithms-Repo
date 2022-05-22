@@ -14,6 +14,9 @@ public class RepeatedString {
                 count++;
             }
 //            System.out.println(str);
+            if (n < s.length()) {
+                return count;
+            }
         }
         return count;
     }

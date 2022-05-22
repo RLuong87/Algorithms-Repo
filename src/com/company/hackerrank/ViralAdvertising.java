@@ -21,6 +21,7 @@ public class ViralAdvertising {
             System.out.println("Day Shared  Liked  Cumulative");
             System.out.println(i + "     " + people + "     " + liked + "        " + totalLikes);
         }
+        System.out.print("Total number of likes: ");
         return totalLikes;
     }
 

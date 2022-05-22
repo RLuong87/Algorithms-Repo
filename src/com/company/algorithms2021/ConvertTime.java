@@ -11,4 +11,10 @@ public class ConvertTime {
 
         return minutes * 60;
     }
+
+    public static void main(String[] args) {
+
+        System.out.println(hoursToSeconds(40));
+        System.out.println(minutesToSeconds(60));
+    }
 }

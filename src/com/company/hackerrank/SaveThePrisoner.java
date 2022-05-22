@@ -32,6 +32,5 @@ public class SaveThePrisoner {
 //        System.out.println("___________________");
 //        System.out.println(saveThePrisoner(3, 7, 3)); // -> 3
 //        System.out.println("___________________");
-
     }
 }

@@ -57,14 +57,14 @@ public class BankCLI {
 
             System.out.println("Welcome " + customerName);
             System.out.println("ID number: " + customerId);
-            System.out.println("\n");
-            System.out.println("A. Check Balance");
-            System.out.println("B. Deposit");
-            System.out.println("C. Withdraw");
-            System.out.println("D. Previous Transaction");
-            System.out.println("E. Exit");
-
             do {
+                System.out.println("\n");
+                System.out.println("A. Check Balance");
+                System.out.println("B. Deposit");
+                System.out.println("C. Withdraw");
+                System.out.println("D. Previous Transaction");
+                System.out.println("E. Exit");
+
                 System.out.println("===========================================================");
                 System.out.println("Enter an option");
                 option = scanner.next().toUpperCase().charAt(0);

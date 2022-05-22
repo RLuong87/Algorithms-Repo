@@ -1,5 +1,7 @@
 package com.company.algorithms2021;
 
+import java.util.Arrays;
+
 public class ConvertToHex {
 
     /*
@@ -26,12 +28,13 @@ public class ConvertToHex {
 
     public static void main(String[] args) {
 
-        String str = "Big Boi", hexStr = "";
+        String str = "Big Boi";
+        StringBuilder hexStr = new StringBuilder();
         int num = 0;
         char[] chars = str.toCharArray();
         for (char c : chars) {
             num = c;
-            hexStr += Integer.toHexString(num) + " ";
+            hexStr.append(Integer.toHexString(num)).append(" ");
         }
         System.out.println(hexStr);
     }
