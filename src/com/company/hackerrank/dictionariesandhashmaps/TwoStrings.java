@@ -13,16 +13,14 @@ public class TwoStrings {
 
     public static String twoStrings(String s1, String s2) {
 
-        Map<String, String> subStrMap1 = new HashMap<>();
-//        Map<String, String> subStrMap2 = new HashMap<>();
+        Map<String, String> subStrMap = new HashMap<>();
 
         for (String s : s1.split("")) {
-            subStrMap1.put(s, s);
+            subStrMap.put(s, s);
         }
 
         for (String s : s2.split("")) {
-//            subStrMap2.put(s, s);
-            if (subStrMap1.containsKey(s)) {
+            if (subStrMap.containsKey(s)) {
                 return "YES";
             }
         }
