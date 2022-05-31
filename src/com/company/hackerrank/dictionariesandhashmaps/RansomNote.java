@@ -26,7 +26,7 @@ public class RansomNote {
             if (countOfWords.containsKey(n)) {
                 countOfWords.put(n, countOfWords.get(n) - 1);
             }
-            if (countOfWords.get(n) < 0) {
+            if (countOfWords.get(n) <= 0) {
                 System.out.println("No");
                 return;
             }
