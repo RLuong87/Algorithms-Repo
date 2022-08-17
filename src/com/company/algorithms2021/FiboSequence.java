@@ -20,6 +20,6 @@ public class FiboSequence {
     }
 
     public static void main(String[] args) {
-        System.out.println(fib(2));
+        System.out.println(fib(10));
     }
 }

@@ -6,7 +6,11 @@ public class ClimbingStairs {
 
         // Fibonacci Sequence 0, 1, 1, 3, 5, 8, 13, 21
 
-        System.out.println(climbingStairs(26));
+//        System.out.println(climbingStairs(26));
+
+        String s = "asmclksdnmcfkj;dsnavkljdsnfjksanlvfkjdnavldfnvladnfla";
+
+        System.out.println(s.charAt(0));
     }
 
     public static int climbingStairs(int steps) {
