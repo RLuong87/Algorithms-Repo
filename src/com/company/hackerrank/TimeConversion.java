@@ -24,6 +24,8 @@ public class TimeConversion {
             s = "00:" + "0" + String.valueOf(min) + ":" + s.substring(6, 8);
         } else if (s.startsWith("12") && s.endsWith("PM")) {
             return s.substring(0, 8);
+        } else {
+            return s.substring(0, 8);
         }
         return s;
     }
@@ -31,13 +33,17 @@ public class TimeConversion {
     public static void main(String[] args) {
 
         String test1 = "12:05:39AM";
-        System.out.println(timeConversion(test1));
+//        System.out.println(timeConversion(test1));
         String test2 = "12:45:54PM";
-        System.out.println(timeConversion(test2));
+//        System.out.println(timeConversion(test2));
         String test3 = "12:00:00AM";
-        System.out.println(timeConversion(test3));
+//        System.out.println(timeConversion(test3));
         String test4 = "12:40:22AM";
-        System.out.println(timeConversion(test4));
+//        System.out.println(timeConversion(test4));
+        String test5 = "06:40:03AM";
+        System.out.println(timeConversion(test5));
+        String test6 = "04:59:59AM";
+        System.out.println(timeConversion(test6));
 
     }
 }
