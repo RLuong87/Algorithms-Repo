@@ -1,0 +1,10 @@
+package com.company.hackerrank.interviewprepkit.SQL;
+
+public class EmployeeSalaries {
+
+//    SELECT NAME FROM EMPLOYEE WHERE (
+//        SALARY > 2000 AND
+//        MONTHS < 10
+//    )
+//    ORDER BY EMPLOYEE_ID ASC;
+}
