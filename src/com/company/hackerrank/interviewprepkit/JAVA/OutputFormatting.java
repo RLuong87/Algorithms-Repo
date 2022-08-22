@@ -13,6 +13,7 @@ public class OutputFormatting {
             //Complete this line
             System.out.println(s1);
             System.out.println(x);
+            System.out.printf("%d", x);
         }
         System.out.println("================================");
 

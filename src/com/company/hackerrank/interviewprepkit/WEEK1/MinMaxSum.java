@@ -1,4 +1,4 @@
-package com.company.hackerrank.interviewprepkit;
+package com.company.hackerrank.interviewprepkit.WEEK1;
 
 import java.util.*;
 

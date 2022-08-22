@@ -1,4 +1,4 @@
-package com.company.hackerrank.interviewprepkit;
+package com.company.hackerrank.hackerrankwarmups;
 
 import java.util.ArrayList;
 import java.util.List;
