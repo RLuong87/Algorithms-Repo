@@ -7,7 +7,6 @@ import java.util.List;
 public class BreakingTheRecords {
 
     public static List<Integer> breakingRecords(List<Integer> scores) {
-        // Write your code here
         int min = scores.get(0), max = scores.get(0), minCount = 0, maxCount = 0;
 
         for (int i = 1; i < scores.size(); i++) {
