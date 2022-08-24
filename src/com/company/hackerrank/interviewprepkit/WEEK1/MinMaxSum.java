@@ -37,12 +37,28 @@ public class MinMaxSum {
         System.out.println(min + " " + max);
     }
 
+    public static void miniMaxSum2(List<Integer> arr) {
+        //keep track of the min number and max number
+        //subtract min number with total sum
+        //subtract max number with total sum
+
+        int min = arr.get(0), max = arr.get(0);
+        long totalSum = 0;
+
+        for (int num : arr) {
+            totalSum += num;
+            if (num < min) min = num;
+            if (num > max) max = num;
+        }
+        System.out.println((totalSum - max) + " " + (totalSum - min));
+    }
+
     public static void main(String[] args) {
 
         List<Integer> test1 = new java.util.ArrayList<>(List.of(1, 3, 5, 7, 9));
         List<Integer> test2 = new java.util.ArrayList<>(List.of(256741038, 623958417, 467905213, 714532089, 938071625));
 
-        miniMaxSum(test1);
-        miniMaxSum(test2); // Expected output --> 2063136757 2744467344
+        miniMaxSum2(test1); // Expected output --> 16 24
+        miniMaxSum2(test2); // Expected output --> 2063136757 2744467344
     }
 }
