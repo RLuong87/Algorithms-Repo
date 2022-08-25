@@ -1,7 +1,5 @@
 package com.company.hackerrank.interviewprepkit.WEEK1;
 
-import java.util.Arrays;
-
 public class TimeConversion {
 
     public static String timeConversion(String s) {

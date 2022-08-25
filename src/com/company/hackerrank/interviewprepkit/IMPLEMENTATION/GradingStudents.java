@@ -7,12 +7,12 @@ import java.util.List;
 public class GradingStudents {
 
     public static List<Integer> gradingStudents(List<Integer> grades) {
-
         List<Integer> roundedGrades = new ArrayList<>();
 
         for (Integer grade : grades) {
-            int diff = Math.abs((int) Math.ceil(grade / 5) * 5 - grade);
-            if (grade >= 38 && diff <= 2) {
+            int diff = Math.abs((int) Math.ceil((grade + 4) / 5) * 5 - grade); // Calculating the difference to the next multiple of 5
+            System.out.println(grade + " " + diff);
+            if (grade >= 38 && diff < 3) {
                 roundedGrades.add((int) (Math.ceil((grade + 4) / 5) * 5));
             } else {
                 roundedGrades.add(grade);
