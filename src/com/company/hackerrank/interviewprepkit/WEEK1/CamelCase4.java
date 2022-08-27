@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class CamelCase4 {
 
     public static void main(String[] args) {
+
+
         Scanner scan = new Scanner(System.in);
 
         StringBuilder str = new StringBuilder();
@@ -22,6 +24,7 @@ public class CamelCase4 {
                 str.append(input);
             }
         }
+
         for (int i = 0; i < str.length(); i++) {
             char c = input.charAt(i);
             if (i != 0 && Character.isUpperCase(c)) {
@@ -34,7 +37,9 @@ public class CamelCase4 {
                 newStr.append(c);
             }
         }
-        System.out.println(newStr.toString().trim());
+        System.out.println(newStr.toString().
+
+                trim());
 
         char[] chars = input.toCharArray();
 
@@ -47,7 +52,8 @@ public class CamelCase4 {
 //        }
 //        System.out.println(str);
 
-        for (char c : input.toCharArray()) {
+        for (
+                char c : input.toCharArray()) {
             if (Character.isUpperCase(c)) {
                 c = Character.toLowerCase(c);
             }
