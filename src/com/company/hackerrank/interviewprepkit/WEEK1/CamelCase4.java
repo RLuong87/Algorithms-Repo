@@ -64,6 +64,13 @@ public class CamelCase4 {
                 newStr.append("()");
             } else {
                 str.append(input.substring(4));
+                String[] arr = str.toString().split(" ");
+                for (int i = 1; i < arr.length; i++) {
+                    arr[i] = arr[i].substring(0, 1).toUpperCase() + arr[i].substring(1);
+                }
+                for (String s : arr) {
+                    newStr.append(s);
+                }
             }
             // String[] arr = str.toString().split("(?=[A-Z])");
             System.out.println(newStr.toString().trim());
