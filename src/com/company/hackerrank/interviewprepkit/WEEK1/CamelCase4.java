@@ -1,8 +1,5 @@
 package com.company.hackerrank.interviewprepkit.WEEK1;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class CamelCase4 {
@@ -15,8 +12,8 @@ public class CamelCase4 {
 
             StringBuilder str = new StringBuilder();
             StringBuilder newStr = new StringBuilder();
-            if (input.startsWith("S;M;") && input.endsWith("()")) {
-                str.append(input.substring(4, input.length() - 2));
+            if (input.startsWith("S;M;")) {
+                str.append(input, 4, input.length() - 2);
                 for (int i = 0; i < str.length(); i++) {
                     char c = str.charAt(i);
                     if (i != 0 && Character.isUpperCase(c)) {
@@ -34,11 +31,9 @@ public class CamelCase4 {
                 for (int i = 0; i < str.length(); i++) {
                     char c = str.charAt(i);
                     if (i != 0 && Character.isUpperCase(c)) {
-                        newStr.append(' ');
-                        newStr.append(Character.toLowerCase(c));
+                        newStr.append(' ').append(Character.toLowerCase(c));
                     } else if (i == 0 && Character.isUpperCase(c)) {
-                        newStr.append(' ');
-                        newStr.append(Character.toLowerCase(c));
+                        newStr.append(' ').append(Character.toLowerCase(c));
                     } else {
                         newStr.append(c);
                     }
