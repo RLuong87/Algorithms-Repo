@@ -1,13 +1,12 @@
 package com.company.algorithms2021;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CompareTriplets {
 
     public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-
-        List<Integer> totalRatings = new ArrayList<>();
 
         int aCount = 0, bCount = 0;
 
@@ -19,10 +18,7 @@ public class CompareTriplets {
                 bCount++;
             }
         }
-        totalRatings.add(aCount);
-        totalRatings.add(bCount);
-
-        return totalRatings;
+        return new ArrayList<>(Arrays.asList(aCount, bCount));
     }
 
     public static void main(String[] args) {
@@ -30,8 +26,8 @@ public class CompareTriplets {
 //        17 28 30
 //        99 16 8
 
-        List<Integer> aliceRating = new ArrayList<>(List.of(17, 28, 30));
-        List<Integer> bobRating = List.of(99, 16, 8);
+        List<Integer> aliceRating = Arrays.asList(17, 28, 30);
+        List<Integer> bobRating = Arrays.asList(99, 16, 8);
         List<Integer> totalRatings = new ArrayList<>();
 
         System.out.println(compareTriplets(aliceRating, bobRating));
