@@ -1,6 +1,7 @@
 package com.company.algorithms2021;
 
-public class WarOfNumbers {
+public class
+WarOfNumbers {
 
 //    There's a great war between the even and odd numbers.
 //    Many numbers already lost their lives in this war, and it's your task to end this.
